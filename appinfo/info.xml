@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>auto_mail_accounts</id>
+    <name>Auto Mail Accounts</name>
+    <summary>Automatically create and delete mail accounts for the mail app for new Nextcloud users.</summary>
+    <description><![CDATA[
+The mail app has a built-in default configuration for mail accounts but it does not create actual mail accounts for each Nextcloud user, so they can not store alternative identitites, a sender name, attachments or collect e-mail addresses. This app hooks into Nextcloud's user creation/deletion and display name/ password change and automatically creates/deletes/updates a mail account in the mail app. This creates mail accounts like if a user entered the settings manually allowing him to use all features of the mail app.
+
+Note that the password is stored with symmetric encryption and can be retreived by the admin. This is the default behaviour of the mail app and unavoidable because it needs to login to the mail server.]]></description>
+    <version>0.1.0</version>
+    <licence>agpl</licence>
+    <author mail="dev@abelonline.de" >Alexey Abel</author>
+    <documentation>
+        <admin>https://github.com/PanCakeConnaisseur/auto_mail_accounts/blob/master/README.md</admin>
+    </documentation>
+    <namespace>AutoMailAccounts</namespace>
+    <category>integration</category>
+    <bugs>https://github.com/PanCakeConnaisseur/auto_mail_accounts/issues</bugs>
+    <repository>https://github.com/PanCakeConnaisseur/auto_mail_accounts</repository>
+     <dependencies>
+        <nextcloud min-version="13" max-version="13"/>
+    </dependencies>
+</info>
