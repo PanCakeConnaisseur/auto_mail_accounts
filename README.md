@@ -34,4 +34,7 @@ Valid ssl modes are `none`, `ssl` and `tls` as described in the [mail app docume
 ## Security
 Note that the password is stored with symmetric encryption and can be retreived by the admin. This is the default behaviour of the mail app and unavoidable because it needs to login to the mail server.
 
+## Troubleshooting
+Set `'loglevel' => '0',` in Nextcloud's *config/config.php* to enable the app's debug output and check the log file.
+
         
