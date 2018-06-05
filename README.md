@@ -37,4 +37,14 @@ Note that the password is stored with symmetric encryption and can be retreived 
 ## Troubleshooting
 Set `'loglevel' => '0',` in Nextcloud's *config/config.php* to enable the app's debug output and check the log file.
 
+## Cleanup
+Afaics the mail app has no mechanism to delete
+
+- all collected e-mail addresses (i.e. addresses that are stored when you send someone an e-mail) of a user
+- all references to attachments of a user
+	
+This means that if you delete a user, while his mail account and aliases will be deleted, his collected addresses and attachment references will remain in the db. This is not the *Auto Mail Account* app's fault.
+
+This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addresses` tables.
+
         
