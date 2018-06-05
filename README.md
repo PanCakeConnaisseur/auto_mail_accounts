@@ -29,6 +29,8 @@ If not you can configure this app by putting the following in Nextcloud's main c
 The key `email_address_suffx` goes into the main hirarchy level, where e.g. `trusted_domains` is.
 
 If your users login as *user* (instead of *user@example.com*) you can set `email_address_suffix` to `@example.com` to automatically add this to the e-mail address of each user.
+
+Valid ssl modes are `none`, `ssl` and `tls` as described in the [mail app documentation](https://github.com/nextcloud/mail/blob/master/doc/admin.md#minimal-configuration)
 ## Security
 Note that the password is stored with symmetric encryption and can be retreived by the admin. This is the default behaviour of the mail app and unavoidable because it needs to login to the mail server.
 
