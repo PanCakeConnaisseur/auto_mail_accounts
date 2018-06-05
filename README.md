@@ -1,4 +1,4 @@
-# Auto Create Mail Accounts
+# Auto Mail Accounts
 The Nextcloud [mail app](https://apps.nextcloud.com/apps/mail) has a built-in default configuration for mail accounts but it does not create actual mail accounts for each Nextcloud user, so they can not store alternative identitites, a sender name, attachments or collect e-mail addresses. Each user would have to enter all the mail server info (e.g. host, port, username, password) individually.
 
 This app hooks into Nextcloud's user creation/deletion and display name/ password change and automatically creates/deletes/updates a mail account in the mail app. This creates mail accounts like if a user entered the settings manually allowing him to use all features of the mail app. This is useful if the login credentials for Nextcloud and the mail server are identical and the all Nextcloud users also have a mail account.
