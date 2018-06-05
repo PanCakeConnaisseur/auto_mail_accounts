@@ -105,7 +105,7 @@ class UserHooks {
 				. "\", smtp port \"" . $this->config->getSmtpPort()
 				. "\", smtp ssl mode \"" . $this->config->getSmtpSslMode()
 				. "\". smtp/imap user is identical to uid."
-				. " email address suffix was \"". $this->config->getEmailAddressSuffix(). "\"."
+				. " e-mail address suffix was \"". $this->config->getEmailAddressSuffix(). "\"."
 				, $this->logContext);
 		};
 	}
