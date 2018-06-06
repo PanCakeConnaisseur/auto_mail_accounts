@@ -140,6 +140,9 @@ class UserHooks {
 
 	private function changeUserCallbackFunction() {
 		return function (\OC\User\User $user, string $feature, string $value) {
+			// The assumption is made that the automatically created mail
+			// account is the first one, because it was automatically created
+			// immediately after the creation of the user.
 			$firstAccountsMailAccount = $this->getUsersFirstMailAccount($user);
 
 			if ($feature === 'displayName') {
@@ -153,6 +156,9 @@ class UserHooks {
 
 	private function changePasswordCallbackFunction() {
 		return function (\OC\User\User $user, string $password) {
+			// The assumption is made that the automatically created mail
+			// account is the first one, because it was automatically created
+			// immediately after the creation of the user.
 			$firstAccountsMailAccount = $this->getUsersFirstMailAccount($user);
 			$firstAccountsMailAccount->setInboundPassword($this->encrypt($password));
 			$firstAccountsMailAccount->setOutboundPassword($this->encrypt($password));
