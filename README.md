@@ -26,7 +26,7 @@ If not you can configure this app by putting the following in Nextcloud's main c
                 'email_address_suffix' => ''
         ),
         
-The key `email_address_suffx` goes into the main hirarchy level, where e.g. `trusted_domains` is.
+The key `email_address_suffx` goes into the main hierarchy level, where e.g. `trusted_domains` is.
 
 If your users login as *user* (instead of *user@example.com*) you can set `email_address_suffix` to `@example.com` to automatically add this to the e-mail address of each user.
 
@@ -45,6 +45,6 @@ Afaics the mail app has no mechanism to delete
 	
 This means that if you delete a user, while his mail account and aliases will be deleted, his collected addresses and attachment references will remain in the db. This is not the *Auto Mail Account* app's fault.
 
-This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addresses` tables.
+This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addresses` tables respectively.
 
         
