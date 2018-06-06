@@ -15,7 +15,7 @@ Note that the password is stored with symmetric encryption and can be retrieved 
         <admin>https://github.com/PanCakeConnaisseur/auto_mail_accounts/blob/master/README.md</admin>
     </documentation>
     <namespace>AutoMailAccounts</namespace>
-    <category>integration</category>
+    <category>tools</category>
     <bugs>https://github.com/PanCakeConnaisseur/auto_mail_accounts/issues</bugs>
     <repository>https://github.com/PanCakeConnaisseur/auto_mail_accounts</repository>
      <dependencies>
