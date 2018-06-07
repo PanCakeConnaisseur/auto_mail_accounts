@@ -32,7 +32,7 @@ If your users login as *user* (instead of *user@example.com*) you can set `email
 
 Valid ssl modes are `none`, `ssl` and `tls` as described in the [mail app documentation](https://github.com/nextcloud/mail/blob/master/doc/admin.md#minimal-configuration)
 ## Security
-Note that the password is stored with symmetric encryption and can be retreived by the admin. This is the default behaviour of the mail app and unavoidable because it needs to login to the mail server.
+Note that the password is stored with symmetric encryption and can be retrieved by the admin. This is the default behaviour of the mail app whose methods this app uses.
 
 ## Troubleshooting
 Set `'loglevel' => '0',` in Nextcloud's *config/config.php* to enable the app's debug output and check the log file.
