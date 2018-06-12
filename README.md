@@ -30,7 +30,7 @@ The key `email_address_suffix` goes into the main hierarchy level, where e.g. `t
 
 If your users login as *user* (instead of *user@example.com*) you can set `email_address_suffix` to `@example.com` to automatically add this to the e-mail address of each user.
 
-Valid ssl modes are `none`, `ssl` and `tls` as described in the [mail app documentation](https://github.com/nextcloud/mail/blob/master/doc/admin.md#minimal-configuration)
+Valid ssl modes are `none`, `ssl` and `tls` as described in the [mail app documentation](https://github.com/nextcloud/mail/blob/master/doc/admin.md#minimal-configuration).
 ## Security
 Note that the password is stored with symmetric encryption and can be retrieved by the admin. This is the default behaviour of the mail app whose methods this app uses.
 
