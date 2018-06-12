@@ -26,7 +26,7 @@ If not you can configure this app by putting the following in Nextcloud's main c
                 'email_address_suffix' => ''
         ),
         
-The key `email_address_suffx` goes into the main hierarchy level, where e.g. `trusted_domains` is.
+The key `email_address_suffix` goes into the main hierarchy level, where e.g. `trusted_domains` is.
 
 If your users login as *user* (instead of *user@example.com*) you can set `email_address_suffix` to `@example.com` to automatically add this to the e-mail address of each user.
 
