@@ -1,7 +1,7 @@
 # Auto Mail Accounts
 The Nextcloud [mail app](https://apps.nextcloud.com/apps/mail) has a built-in default configuration for mail accounts but it does not create actual mail accounts for each Nextcloud user, so they can not store alternative identitites, a sender name, attachments or collect e-mail addresses. Each user would have to enter all the mail server info (e.g. host, port, username, password) individually.
 
-This app hooks into Nextcloud's user creation/deletion and display name/ password change and automatically creates/deletes/updates a mail account in the mail app. This creates mail accounts like if a user entered the settings manually allowing him to use all features of the mail app. This is useful if the login credentials for Nextcloud and the mail server are identical and the all Nextcloud users also have a mail account.
+This app hooks into Nextcloud's user creation/deletion and display name/ password change and automatically creates/deletes/updates a mail account in the mail app. This creates mail accounts like if a user entered the settings manually allowing him to use all features of the mail app. This is useful if the login credentials for Nextcloud and the mail server are identical and all Nextcloud users also have a mail account.
 
 ## Features
 Hooks into:
@@ -26,7 +26,7 @@ If not you can configure this app by putting the following in Nextcloud's main c
                 'email_address_suffix' => ''
         ),
         
-The key `email_address_suffix` goes into the main hierarchy level, where e.g. `trusted_domains` is.
+The key `auto_mail_accounts` goes into the main hierarchy level, where e.g. `trusted_domains` is.
 
 If your users login as *user* (instead of *user@example.com*) you can set `email_address_suffix` to `@example.com` to automatically add this to the e-mail address of each user.
 
