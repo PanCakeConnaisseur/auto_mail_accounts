@@ -145,7 +145,7 @@ class UserHooks {
 			// immediately after the creation of the user.
 			$firstAccountsMailAccount = $this->getUsersFirstMailAccount($user);
 
-			if ($feature === 'displayName') {
+			if (($firstAccountsMailAccount) and ($feature === 'displayName')) {
 				$firstAccountsMailAccount->setName($value);
 				$this->accountService->save($firstAccountsMailAccount);
 				$this->logger->debug("Automatically changed sender name for mail account"
@@ -160,11 +160,13 @@ class UserHooks {
 			// account is the first one, because it was automatically created
 			// immediately after the creation of the user.
 			$firstAccountsMailAccount = $this->getUsersFirstMailAccount($user);
-			$firstAccountsMailAccount->setInboundPassword($this->encrypt($password));
-			$firstAccountsMailAccount->setOutboundPassword($this->encrypt($password));
-			$this->accountService->save($firstAccountsMailAccount);
-			$this->logger->debug("Automatically changed password for mail account of uid "
-				. $user->getUID() . ".", $this->logContext);
+			if ($firstAccountsMailAccount) {
+				$firstAccountsMailAccount->setInboundPassword($this->encrypt($password));
+				$firstAccountsMailAccount->setOutboundPassword($this->encrypt($password));
+				$this->accountService->save($firstAccountsMailAccount);
+				$this->logger->debug("Automatically changed password for mail account of uid "
+					. $user->getUID() . ".", $this->logContext);
+			}
 		};
 	}
 
@@ -175,10 +177,14 @@ class UserHooks {
 
 	private function getUsersFirstMailAccount(\OC\User\User $user) {
 		$accounts = $this->accountService->findByUserId($user->getUID());
-		uksort($accounts, function ($a, $b) {
-			return ($a['account']['id'] < $b['account']['id']) ? -1 : 1;
-		});
+		if ($accounts) {
+			uksort($accounts, function ($a, $b) {
+				return ($a['account']['id'] < $b['account']['id']) ? -1 : 1;
+			});
 
-		return $accounts[0]->getMailAccount();
+			return $accounts[0]->getMailAccount();
+		} else {
+			return false;
+		}
 	}
 }
