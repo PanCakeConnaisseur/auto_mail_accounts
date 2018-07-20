@@ -86,13 +86,13 @@ class UserHooks {
 			$account->setInboundHost($this->config->getImapHost());
 			$account->setInboundPort($this->config->getImapPort());
 			$account->setInboundSslMode($this->config->getImapSslMode());
-			$account->setInboundUser($uid);
+			$account->setInboundUser($email);
 			$account->setInboundPassword($this->encrypt($password));
 
 			$account->setOutboundHost($this->config->getSmtpHost());
 			$account->setOutboundPort($this->config->getSmtpPort());
 			$account->setOutboundSslMode($this->config->getSmtpSslMode());
-			$account->setOutboundUser($uid);
+			$account->setOutboundUser($email);
 			$account->setOutboundPassword($this->encrypt($password));
 
 			$this->accountService->save($account);
