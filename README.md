@@ -31,6 +31,8 @@ The key `auto_mail_accounts` goes into the main hierarchy level, where e.g. `tru
 If your users login as *user* (instead of *user@example.com*) you can set `email_address_suffix` to `@example.com` to automatically add this to the e-mail address of each user.
 
 Valid ssl modes are `none`, `ssl` and `tls` as described in the [mail app documentation](https://github.com/nextcloud/mail/blob/master/doc/admin.md#minimal-configuration).
+
+Note that the email field during user creation in the Nextcloud user interface is ignored and set to the username (uid).
 ## Security
 Note that the password is stored with symmetric encryption and can be retrieved by the admin. This is the default behaviour of the mail app whose methods this app uses.
 
@@ -48,3 +50,8 @@ This means that if you delete a user, while his mail account and aliases will be
 This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addresses` tables respectively.
 
         
+## Changelog
+### 0.1.1
+- Add compatibility with Nextcloud 14
+### 0.1.0
+- Initial release
