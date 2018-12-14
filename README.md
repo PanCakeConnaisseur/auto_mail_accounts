@@ -51,6 +51,8 @@ This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addre
 
         
 ## Changelog
+### 0.1.3
+- Fix a problem where user deletion or avatar change would fail if a user account did not have a mail account.
 ### 0.1.2
 - Add compatibility with Nextcloud 15
 ### 0.1.1
