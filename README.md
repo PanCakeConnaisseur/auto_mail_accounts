@@ -14,7 +14,7 @@ Hooks into:
 ## Configuration
 If your Nextcloud login is identical to the e-mail address e.g. *user@example.com* and the mail server is on the same machine and uses default ports you don't need any configuration, because the default values below will be used.
 
-If not you can configure this app by putting the following in Nextcloud's main configuration file in *config/config.php*. These are also the default values:
+If not, you can configure this app by putting the following in Nextcloud's main configuration file in *config/config.php*. These are also the default values:
 
 	'auto_mail_accounts' => array (
                 'imap_host' => 'localhost',
@@ -51,6 +51,8 @@ This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addre
 
         
 ## Changelog
+### 0.1.2
+- Add compatibility with Nextcloud 15
 ### 0.1.1
 - Add compatibility with Nextcloud 14
 ### 0.1.0
