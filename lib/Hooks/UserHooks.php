@@ -140,12 +140,11 @@ class UserHooks {
 
 	private function changeUserCallbackFunction() {
 		return function (\OC\User\User $user, string $feature, string $value) {
-			// The assumption is made that the automatically created mail
-			// account is the first one, because it was automatically created
-			// immediately after the creation of the user.
-			$firstAccountsMailAccount = $this->getUsersFirstMailAccount($user);
-
 			if ($feature === 'displayName') {
+				// The assumption is made that the automatically created mail
+				// account is the first one, because it was automatically created
+				// immediately after the creation of the user.
+				$firstAccountsMailAccount = $this->getUsersFirstMailAccount($user);
 				$firstAccountsMailAccount->setName($value);
 				$this->accountService->save($firstAccountsMailAccount);
 				$this->logger->debug("Automatically changed sender name for mail account"
