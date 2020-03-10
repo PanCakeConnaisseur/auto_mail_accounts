@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2020-03-10
+### Added
+- Compatibility with Nextcloud 16, 17, and 18
+
 ## [0.1.3] - 2018-12-14
 ### Fixed
 - Fix a problem where user deletion or avatar change would fail if a user account did not have a mail account.

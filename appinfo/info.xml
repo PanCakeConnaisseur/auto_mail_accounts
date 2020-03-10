@@ -19,6 +19,6 @@ Note that the password is stored with symmetric encryption and can be retrieved 
     <bugs>https://github.com/PanCakeConnaisseur/auto_mail_accounts/issues</bugs>
     <repository>https://github.com/PanCakeConnaisseur/auto_mail_accounts</repository>
      <dependencies>
-        <nextcloud min-version="13" max-version="15"/>
+        <nextcloud min-version="13" max-version="18"/>
     </dependencies>
 </info>
