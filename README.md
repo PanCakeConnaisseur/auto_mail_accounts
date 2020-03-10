@@ -48,14 +48,3 @@ Afaics the mail app has no mechanism to delete
 This means that if you delete a user, while his mail account and aliases will be deleted, his collected addresses and attachment references will remain in the db. This is not the *Auto Mail Account* app's fault.
 
 This data can be found in the `oc_mail_attachments` and `oc_mail_collected_addresses` tables respectively.
-
-        
-## Changelog
-### 0.1.3
-- Fix a problem where user deletion or avatar change would fail if a user account did not have a mail account.
-### 0.1.2
-- Add compatibility with Nextcloud 15
-### 0.1.1
-- Add compatibility with Nextcloud 14
-### 0.1.0
-- Initial release
