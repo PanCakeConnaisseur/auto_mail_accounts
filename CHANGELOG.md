@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Order of XML elements in appinfo/info.xml now conforms to XSD
+
 ## [0.1.6] - 2020-10-07
 ### Added
 - Compatibility with Nextcloud 20
