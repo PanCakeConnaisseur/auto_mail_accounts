@@ -1,5 +1,14 @@
+--- 
+# :warning: Obsolete
+The mail app has implemented all of this app's
+functionality in its recent versions (tested with mail 1.9.5). Accounts can be provisioned automatically, and
+it also updates a changed display name and password. Thus, this app will not be developed or maintained
+further. This repository will remain available. 
+---
+
 # Auto Mail Accounts
-The Nextcloud [mail app](https://apps.nextcloud.com/apps/mail) has a built-in default configuration for mail accounts but it does not create actual mail accounts for each Nextcloud user, so they can not store alternative identitites, a sender name, attachments or collect e-mail addresses. Each user would have to enter all the mail server info (e.g. host, port, username, password) individually.
+The Nextcloud [mail app](https://apps.nextcloud.com/apps/mail) has a built-in default configuration for 
+mail accounts, but it does not create actual mail accounts for each Nextcloud user, so they can not store alternative identitites, a sender name, attachments or collect e-mail addresses. Each user would have to enter all the mail server info (e.g. host, port, username, password) individually.
 
 This app hooks into Nextcloud's user creation/deletion and display name/ password change and automatically creates/deletes/updates a mail account in the mail app. This creates mail accounts like if a user entered the settings manually allowing him to use all features of the mail app. This is useful if the login credentials for Nextcloud and the mail server are identical and all Nextcloud users also have a mail account.
 
@@ -42,7 +51,7 @@ Set `'loglevel' => '0',` in Nextcloud's *config/config.php* to enable the app's 
 ## Cleanup
 Afaics the mail app has no mechanism to delete
 
-- all collected e-mail addresses (i.e. addresses that are stored when you send someone an e-mail) of a user
+- all collected e-mail addresses (i.e., addresses that are stored when you send someone an e-mail) of a user
 - all references to attachments of a user
 	
 This means that if you delete a user, while his mail account and aliases will be deleted, his collected addresses and attachment references will remain in the db. This is not the *Auto Mail Account* app's fault.
